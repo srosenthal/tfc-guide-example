@@ -53,8 +53,8 @@ resource "aws_security_group" "elb" {
   }
   # Inbound HTTP from anywhere
   ingress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = var.elb_port
+    to_port     = var.elb_port
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
