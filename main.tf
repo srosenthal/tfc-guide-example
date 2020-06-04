@@ -22,6 +22,16 @@ resource "aws_dynamodb_table" "tfc_example_table" {
     type = "S"
   }
 
+  attribute {
+    name = "Cheese"
+    type = "S"
+  }
+
+  attribute {
+    name = "SodaFlavor"
+    type = "S"
+  }
+
   tags = {
     user_name = var.tag_user_name
   }
