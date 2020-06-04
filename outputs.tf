@@ -1,3 +1,4 @@
-output "tfc_example_table_arn" {
-  value = aws_dynamodb_table.tfc_example_table.arn
+output "clb_dns_name" {
+  value       = aws_elb.example.dns_name
+  description = "The domain name of the load balancer"
 }
